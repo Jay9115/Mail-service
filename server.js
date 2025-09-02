@@ -5,8 +5,8 @@ const helmet = require('helmet');
 const cors = require('cors');
 
 const connectDB = require('./config/db');
-const authRoutes = require('Mailservice\Mail-service\Routes\auth.js');
-const mailRoutes = require('Mailservice\Mail-service\Routes\mail.js');
+const authRoutes = require('./Routes/auth.js');
+const mailRoutes = require('./Routes/mail.js');
 
 const app = express();
 
