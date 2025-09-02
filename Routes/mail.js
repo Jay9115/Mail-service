@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const validator = require('validator');
-const requireApiKey = require('../middleware/apiKey');
+const requireApiKey = require('./middleware/apiKey');
 const { sendMail } = require('../utils/mailer');
 // const MailLog = require('../models/MailLog');
 router.use(requireApiKey);
