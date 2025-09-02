@@ -9,8 +9,8 @@ const requireApiKey = require('./middleware/apiKey');
 const User = require('../models/User');
 const Otp = require('../models/Otp');
 // const MailLog = require('../models/MailLog');
-const { sendMail } = require('../utils/mailer');
-const { emailRateCheck } = require('../utils/rateLimiter');
+const { sendMail } = require('../Utils/mailer');
+const { emailRateCheck } = require('../Utils/rateLimiter');
 
 const OTP_LENGTH = parseInt(process.env.OTP_LENGTH || '6');
 const OTP_TTL_SECONDS = parseInt(process.env.OTP_TTL_SECONDS || '300');
