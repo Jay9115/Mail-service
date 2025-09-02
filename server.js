@@ -20,6 +20,13 @@ const PORT = process.env.PORT || 3001;
   await connectDB(process.env.MONGODB_URI);
 
   app.get('/', (req, res) => res.send('OTP Mail Service running'));
+  app.get('/health', (req, res) => {
+    res.status(200).json({
+      status: 'ok',
+      message: 'Mail Service healthy',
+      timestamp: new Date().toISOString()
+    });
+  });
   app.use('/auth', authRoutes);
   app.use('/mail', mailRoutes);
 
