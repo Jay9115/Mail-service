@@ -2,8 +2,8 @@
 const express = require('express');
 const router = express.Router();
 const validator = require('validator');
-const requireApiKey = require('../middleware/apiKey');
-const { sendMail } = require('../Utils/mailer');
+const requireApiKey = require('../middleware/apiKey.js');
+const { sendMail } = require('../Utils/mailer.js');
 // const MailLog = require('../models/MailLog');
 router.use(requireApiKey);
 // This endpoint sends custom email(s). Add authentication in production.
