@@ -1,0 +1,16 @@
+# render.yaml - Optional: Infrastructure as Code for Render
+services:
+  - type: web
+    name: mail-service
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        fromService:
+          type: web
+          name: mail-service
+          property: port
