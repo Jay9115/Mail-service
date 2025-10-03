@@ -9,7 +9,6 @@ const authRoutes = require('./Routes/auth.js');
 const mailRoutes = require('./Routes/mail.js');
 
 const app = express();
-
 app.use(helmet());
 app.use(cors({ origin: true }));
 app.use(express.json());
